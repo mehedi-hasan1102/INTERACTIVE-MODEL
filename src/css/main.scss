@@ -60,10 +60,10 @@ body {
 
   /* pill sizing */
   --pill-radius: 70px;
-  --pill-main-width: 272px;
+  --pill-main-width: 192px;
   --pill-sub-width: 176px;
   --pill-gap: 18px;
-  --pill-height: 184px;
+  --pill-height: 192px;
   --dot-size: 24px;
   --dot-gap: 12px;
 
@@ -342,11 +342,11 @@ body {
   font-weight: 900;
   font-size: 1.22rem;
   line-height: 1.2;
-  text-align: left;
+  
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  // padding: 0 36px;
+  border-radius: 999px;
+ 
+   
   min-height: var(--pill-height);
   border-radius: var(--pill-radius);
 
@@ -356,7 +356,7 @@ body {
   max-width: var(--pill-main-width);
   flex: 0 0 var(--pill-main-width);
 
-display: flex;
+
   align-items: center;      /* vertical center */
   justify-content: center;  /* horizontal center */
   text-align: center;       /* text alignment center */
@@ -374,10 +374,17 @@ display: flex;
   max-width: 100%;
 }
 
+// .pill:focus {
+//   outline: 3px solid var(--focus);
+//   outline-offset: 3px;
+  
+// }
+
 .pill:focus {
-  outline: 3px solid var(--focus);
-  outline-offset: 6px;
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus);
 }
+
 
 .pill br {
   display: block;
@@ -457,6 +464,11 @@ display: flex;
 
 .pill-cap-blue {
   --accent: var(--blue-dark);
+  border-radius: 999px;
+  background-image: url('../../src/assets/GreenCircle.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .pill-cap-orange {
