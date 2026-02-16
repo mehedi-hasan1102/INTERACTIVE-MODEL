@@ -152,5 +152,11 @@
     btn.addEventListener('click', function () {
       return openPopover(btn);
     });
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openPopover(btn);
+      }
+    });
   });
 })();
