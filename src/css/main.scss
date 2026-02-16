@@ -56,7 +56,7 @@ body {
   /* vertical rhythm between the 3 rows */
   --rail-width: 240px;
   /* right rail column width */
-  --gutter: 120px;
+  --gutter: 36px;
   /* fixed horizontal gutter between main + rail */
 
   /* pill sizing */
@@ -95,7 +95,7 @@ body {
     --pill-sub-width: 152px;
     --pill-gap: 16px;
     --pill-height: 90px;
-    --gutter: 96px;
+    --gutter: 30px;
     --rail-width: 200px;
     --dot-gap: 10px;
     --dot-size: 22px;
@@ -127,7 +127,18 @@ body {
   max-width: 100%;
 }
 
+.imw-title-row,
+.imw-click-hint-row {
+  display: grid;
+  grid-template-columns: minmax(auto, 430px) minmax(0, 1fr) minmax(auto, 240px);
+  column-gap: var(--gutter);
+  width: 100%;
+}
+
 .imw-title {
+  display: block;
+  grid-column: 2;
+  width: 100%;
   text-align: center;
   font-weight: 900;
   letter-spacing: .005em;
@@ -145,13 +156,23 @@ body {
   height: auto;
 }
 
+.imw-click-hint {
+  grid-column: 2;
+  margin: 24px 0 0;
+  text-align: center;
+  font-size: clamp(1.2rem, 1.8vw, 1.9rem);
+  line-height: 1.2;
+  font-weight: 700;
+  color: #6f7378;
+}
+
 
 .strip-grid {
   width: 100%;
   min-height: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: minmax(auto, 500px) minmax(0, 1fr) minmax(auto, 240px);
+  grid-template-columns: minmax(auto, 430px) minmax(0, 1fr) minmax(auto, 240px);
   grid-template-rows: auto repeat(6, 1fr);
   grid-template-areas:
     ". guide2 ."
@@ -187,6 +208,7 @@ body {
   gap: 16px;
   align-items: flex-start;
   width: 100%;
+  justify-self: start;
 }
 
 
@@ -302,6 +324,17 @@ body {
   font-weight: 400;
 }
 
+/* Keep left hints directly under the right-side pill (Safe / Indigenous People Power / Two-Way Learning) */
+.left-hint-1,
+.left-hint-2,
+.left-hint-3 {
+  justify-self: start;
+  width: 100%;
+  max-width: none;
+  padding: 10px 10px 10px calc(var(--pill-main-width) + 12px);
+  text-align: left;
+}
+
 .guide-bottom {
   grid-area: guide3;
   align-content: center;
@@ -375,10 +408,12 @@ body {
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: stretch;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 12px;
-  width: 100%;
+  width: fit-content;
   max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 // .pill:focus {
@@ -1309,6 +1344,17 @@ body {
     column-gap: 0;
     row-gap: 48px;
   }
+
+  .imw-title-row,
+  .imw-click-hint-row {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .imw-title,
+  .imw-click-hint {
+    grid-column: 1;
+  }
 }
 
 
@@ -1339,6 +1385,12 @@ body {
     gap: 12px;
     width: 100%;
     max-width: 100%;
+  }
+
+  .left-hint-1,
+  .left-hint-2,
+  .left-hint-3 {
+    padding-left: 10px;
   }
 
   .guide-mid {
