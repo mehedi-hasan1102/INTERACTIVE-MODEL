@@ -453,8 +453,8 @@ body {
 /* Left tooltips */
 .tooltip.speech {
   position: absolute;
-  left: 0;
-  top: -20px;
+  left: 160px;
+  top: 24px;
   transform: translateY(-100%);
   max-width: 320px;
   background: #e9edf1;
