@@ -482,7 +482,7 @@ body {
 .pill-blue {
   border-radius: 999px;
   background-image: url("../../src/assets/BlueCircle.png");
-  background-size: cover;
+  background-size: 138% 138%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -491,7 +491,7 @@ body {
   --main: var(--orange);
   border-radius: 999px;
   background-image: url("../../src/assets/OrangeCircle.png");
-  background-size: cover;
+  background-size: 138% 138%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -500,7 +500,7 @@ body {
   --main: var(--green);
   border-radius: 999px;
   background-image: url("../../src/assets/GreenCircle.png");
-  background-size: cover;
+  background-size: 138% 138%;
   background-position: center;
   background-repeat: no-repeat;
 }
