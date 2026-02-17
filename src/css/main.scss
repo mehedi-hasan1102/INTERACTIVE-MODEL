@@ -1040,6 +1040,7 @@ body {
 
 .stage-column .dot:nth-child(1) {
   grid-row: 1;
+  transform: translateY(3px);
 }
 
 .stage-column .dot:nth-child(2) {
