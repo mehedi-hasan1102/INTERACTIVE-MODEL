@@ -654,7 +654,10 @@ body {
   font-size: 14pt;
   font-weight: 600;
   padding: 1.1rem 1.2rem 1.2rem;
-  border-radius: 22px;
+  // border-radius: 22px;
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+  border-bottom-right-radius: 48px;
   display: none;
   box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
   z-index: 1000;
@@ -663,17 +666,17 @@ body {
   
 }
 
-.tooltip.speech::after {
-  content: "";
-  position: absolute;
-  left: 16px;
-  top: 100%;
-  width: 0;
-  height: 0;
-  border-left: 14px solid transparent;
-  border-right: 14px solid transparent;
-  border-top: 14px solid #e9edf1;
-}
+// .tooltip.speech::after {
+//   content: "";
+//   position: absolute;
+//   left: 16px;
+//   top: 100%;
+//   width: 0;
+//   height: 0;
+//   border-left: 14px solid transparent;
+//   border-right: 14px solid transparent;
+//   border-top: 14px solid #e9edf1;
+// }
 
 /* Tooltip Themes */
 .pill-blue~.tooltip.speech {
@@ -1199,11 +1202,15 @@ body {
   position: absolute;
   max-width: 540px;
   color: #fff;
-  border-radius: 22px;
-  padding: 1rem 1.1rem;
+  // border-radius: 22px;
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+  border-bottom-left-radius: 48px;
+  padding: 2rem 1.1rem;
   box-shadow: 0 18px 50px rgba(0, 0, 0, .25);
   border: 0;
   pointer-events: auto;
+  
 }
 
 .popover-card h3 {
@@ -1237,16 +1244,16 @@ body {
 }
 
 /* Popover Arrows */
-.popover-card::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  left: var(--arrow-offset, 50%);
-  transform: translateX(-50%);
-}
+// .popover-card::after {
+//   content: "";
+//   position: absolute;
+//   width: 0;
+//   height: 0;
+//   border-left: 12px solid transparent;
+//   border-right: 12px solid transparent;
+//   left: var(--arrow-offset, 50%);
+//   transform: translateX(-50%);
+// }
 
 .popover-card.arrow-bottom::after {
   top: 100%;
