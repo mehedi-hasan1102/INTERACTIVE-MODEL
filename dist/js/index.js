@@ -25,6 +25,8 @@
 
   var POPOVER_MIN_LEFT = -480; // allow stronger overflow to the left of midRow
 
+  var POPOVER_SHIFT_Y = 30; // positive value moves the popover card downward
+
   var POPOVER_EDGE_GAP = 10;
   var titleMap = {};
   var lastTrigger = null;
@@ -123,7 +125,7 @@
 
     var left = rDot.left + rDot.width / 2 - rCard.width / 2 - rMid.left; // Always position above the dot
 
-    var top = rDot.top - rMid.top - rCard.height - 15; // Add arrow pointing down
+    var top = rDot.top - rMid.top - rCard.height - 15 + POPOVER_SHIFT_Y; // Add arrow pointing down
 
     card.classList.remove('arrow-top');
     card.classList.add('arrow-bottom'); // Move card slightly left, then clamp within midRow

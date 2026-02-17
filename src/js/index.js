@@ -43,6 +43,7 @@
   const closeBtn = popover.querySelector('[data-close]');
   const POPOVER_SHIFT_X = -280; // negative value moves the popover card to the left
   const POPOVER_MIN_LEFT = -480; // allow stronger overflow to the left of midRow
+  const POPOVER_SHIFT_Y = 30; // positive value moves the popover card downward
   const POPOVER_EDGE_GAP = 10;
 
   const titleMap = {};
@@ -147,7 +148,7 @@
     let left = (rDot.left + rDot.width / 2) - (rCard.width / 2) - rMid.left;
 
     // Always position above the dot
-    let top = (rDot.top - rMid.top) - rCard.height - 15;
+    let top = (rDot.top - rMid.top) - rCard.height - 15 + POPOVER_SHIFT_Y;
 
     // Add arrow pointing down
     card.classList.remove('arrow-top');
