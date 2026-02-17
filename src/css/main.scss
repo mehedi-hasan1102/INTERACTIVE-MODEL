@@ -533,6 +533,7 @@ body {
   background-size: 138% 138%;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .pill-blue {
@@ -547,6 +548,8 @@ body {
 .pill-green {
   --main: var(--green);
   background-image: url('../../src/assets/GreenCircle.png');
+  /* Keep the source artwork ratio so reciprocity icon stays round */
+  background-size: auto 162%;
 }
 
 .pill-cap-blue {
