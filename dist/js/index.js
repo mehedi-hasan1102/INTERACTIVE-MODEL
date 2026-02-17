@@ -142,7 +142,7 @@
     var arrowOffset = dotCenterX - cardLeft; // Set CSS custom property for arrow position
 
     card.style.setProperty('--arrow-offset', "".concat(arrowOffset, "px"));
-    closeBtn.focus();
+    if (closeBtn) closeBtn.focus();
     document.addEventListener('keydown', onEsc);
   }
 
@@ -162,7 +162,7 @@
     if (e.key === 'Escape') closePopover();
   }
 
-  closeBtn.addEventListener('click', closePopover); // click handlers
+  if (closeBtn) closeBtn.addEventListener('click', closePopover); // click handlers
 
   dots.forEach(function (btn) {
     btn.type = 'button';

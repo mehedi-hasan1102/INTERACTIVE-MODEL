@@ -173,7 +173,7 @@
     // Set CSS custom property for arrow position
     card.style.setProperty('--arrow-offset', `${arrowOffset}px`);
 
-    closeBtn.focus();
+    if (closeBtn) closeBtn.focus();
     document.addEventListener('keydown', onEsc);
   }
 
@@ -188,7 +188,7 @@
     }
   }
   function onEsc(e) { if (e.key === 'Escape') closePopover(); }
-  closeBtn.addEventListener('click', closePopover);
+  if (closeBtn) closeBtn.addEventListener('click', closePopover);
 
   // click handlers
   dots.forEach(btn => {
