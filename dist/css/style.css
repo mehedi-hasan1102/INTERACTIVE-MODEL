@@ -1039,24 +1039,15 @@ body {
   transition: filter 0.2s ease, box-shadow 0.2s ease;
 }
 
-.stage-column[data-stage-col="0"] {
+.stage-column[data-stage-col="0"],
+.stage-column[data-stage-col="1"],
+.stage-column[data-stage-col="2"] {
   --stage-col-bg: #e9e2db;
 }
 
-.stage-column[data-stage-col="1"] {
-  --stage-col-bg: #d6ccc3;
-}
-
-.stage-column[data-stage-col="2"] {
-  --stage-col-bg: #e4bd98;
-}
-
-.stage-column[data-stage-col="3"] {
-  --stage-col-bg: #b8c8d0;
-}
-
+.stage-column[data-stage-col="3"],
 .stage-column[data-stage-col="4"] {
-  --stage-col-bg: #7c9db0;
+  --stage-col-bg: #b8c8d0;
 }
 
 .stage-column .dot:nth-child(1) {
