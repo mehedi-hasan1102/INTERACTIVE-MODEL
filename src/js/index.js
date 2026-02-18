@@ -251,18 +251,27 @@
     document.addEventListener('keydown', onEsc);
   }
 
-  function closePopover() {
+  function closePopover({ restoreFocus = true } = {}) {
     popover.hidden = true;
     clearFloatingTitle();
     clearSelectedDot();
     document.removeEventListener('keydown', onEsc);
-    if (lastTrigger) {
+    if (restoreFocus && lastTrigger) {
       lastTrigger.focus();
       lastTrigger = null;
+      return;
     }
+    lastTrigger = null;
   }
   function onEsc(e) { if (e.key === 'Escape') closePopover(); }
+  function onPointerDownOutside(e) {
+    if (popover.hidden) return;
+    const target = e.target instanceof Element ? e.target : null;
+    if (target && target.closest('.dot')) return;
+    closePopover({ restoreFocus: false });
+  }
   if (closeBtn) closeBtn.addEventListener('click', closePopover);
+  document.addEventListener('pointerdown', onPointerDownOutside);
 
   // click handlers
   dots.forEach(btn => {

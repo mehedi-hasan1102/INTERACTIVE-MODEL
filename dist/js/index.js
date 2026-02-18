@@ -222,22 +222,39 @@
   }
 
   function closePopover() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        _ref$restoreFocus = _ref.restoreFocus,
+        restoreFocus = _ref$restoreFocus === void 0 ? true : _ref$restoreFocus;
+
     popover.hidden = true;
     clearFloatingTitle();
     clearSelectedDot();
     document.removeEventListener('keydown', onEsc);
 
-    if (lastTrigger) {
+    if (restoreFocus && lastTrigger) {
       lastTrigger.focus();
       lastTrigger = null;
+      return;
     }
+
+    lastTrigger = null;
   }
 
   function onEsc(e) {
     if (e.key === 'Escape') closePopover();
   }
 
-  if (closeBtn) closeBtn.addEventListener('click', closePopover); // click handlers
+  function onPointerDownOutside(e) {
+    if (popover.hidden) return;
+    var target = e.target instanceof Element ? e.target : null;
+    if (target && target.closest('.dot')) return;
+    closePopover({
+      restoreFocus: false
+    });
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', closePopover);
+  document.addEventListener('pointerdown', onPointerDownOutside); // click handlers
 
   dots.forEach(function (btn) {
     btn.type = 'button';
