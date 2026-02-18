@@ -41,10 +41,10 @@
   const titleEl = document.getElementById('imw-popover-title');
   const textEl = document.getElementById('imw-popover-text');
   const closeBtn = popover.querySelector('[data-close]');
-  const POPOVER_SHIFT_X = -265; // negative value moves the popover card to the left
-  const POPOVER_MIN_LEFT = -480; // allow stronger overflow to the left of midRow
-  const POPOVER_SHIFT_Y = 42; // positive value moves the popover card downward
-  const POPOVER_EDGE_GAP = 10;
+  const POPOVER_SHIFT_X = -120; // negative value moves the popover card to the left
+  const POPOVER_MIN_LEFT = -180; // allow a small overflow to the left of midRow
+  const POPOVER_SHIFT_Y = 12; // positive value moves the popover card downward
+  const POPOVER_EDGE_GAP = 8;
 
   const titleMap = {};
   let lastTrigger = null;
