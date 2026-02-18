@@ -21,11 +21,11 @@
   var titleEl = document.getElementById('imw-popover-title');
   var textEl = document.getElementById('imw-popover-text');
   var closeBtn = popover.querySelector('[data-close]');
-  var POPOVER_SHIFT_X = -120; // negative value moves the popover card to the left
+  var POPOVER_SHIFT_X = -152; // negative value moves the popover card to the left
 
-  var POPOVER_MIN_LEFT = -180; // allow a small overflow to the left of midRow
+  var POPOVER_MIN_LEFT = -220; // allow a small overflow to the left of midRow
 
-  var POPOVER_SHIFT_Y = 12; // positive value moves the popover card downward
+  var POPOVER_SHIFT_Y = 38; // positive value moves the popover card downward
 
   var POPOVER_EDGE_GAP = 8;
   var titleMap = {};

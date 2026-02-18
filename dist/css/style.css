@@ -1133,44 +1133,50 @@ body {
 
 .popover-card {
   position: absolute;
-  width: min(240px, 100vw - 24px);
-  max-width: 240px;
+  width: min(300px, 100vw - 24px);
+  max-width: 300px;
   color: #fff;
-  border-radius: 18px;
-  padding: 0.55rem 0.7rem;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+  border-bottom-left-radius: 48px;
+  border-bottom-right-radius: 0;
+  padding: 1rem 1.15rem 1.05rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
   border: 0;
   pointer-events: auto;
 }
 
 .popover-card h3 {
-  margin: 0 0 0.28rem;
-  color: #fff;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 1.2;
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .popover-card p {
   margin: 0;
   color: #fff;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: 14pt;
+  font-weight: 700;
+  line-height: 1.25;
 }
 
 .popover-card[data-theme=cultural] {
-  background: var(--blue);
+  background: #3f79ac;
 }
 
 .popover-card[data-theme=power] {
-  background: var(--orange);
+  background: #c86b52;
 }
 
 .popover-card[data-theme=reciprocity] {
-  background: var(--green);
+  background: #4a8a62;
 }
 
 /* Popover Arrows */
